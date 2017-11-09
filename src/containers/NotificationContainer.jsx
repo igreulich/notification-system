@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import { Expo, TimelineMax } from 'gsap';
+import TimelineMax from 'gsap/TimelineMax';
+import { Expo } from 'gsap/EasePack';
 
 import * as NotificationActions from '../actions';
 import NotificationConstants from '../constants';
@@ -33,7 +34,6 @@ export default class NotificationContainer extends Component {
   };
 
   componentDidMount() {
-    console.log(TimelineMax);
     const $notification = ReactDOM.findDOMNode(this.notification); // eslint-disable-line react/no-find-dom-node
     /* Since we use `reverse()` to show the notification,
      * which adds the alt of the default props,
