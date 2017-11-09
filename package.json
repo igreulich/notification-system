@@ -1,0 +1,66 @@
+{
+  "name": "notification-system",
+  "description": "A self-contained, react based notification system; animations by gsap.",
+  "version": "1.0.0",
+  "author": "Ian Greulich",
+  "license": "MIT",
+  "keywords": [
+    "notification",
+    "notifications",
+    "react"
+  ],
+  "homepage": "https://github.com/igreulich/notification-system#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/igreulich/notification-system.git"
+  },
+  "bugs": {
+    "url": "https://github.com/igreulich/notification-system/issues"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js -p",
+    "test": "BABEL_ENV=test mocha --compilers js:babel-core/register --require ./testSetup.js --recursive ./test",
+    "test:watch": "yarn run test --watch"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "classnames": "^2.2.5",
+    "flux": "^3.1.3",
+    "gsap": "^1.20.3",
+    "keymirror": "^0.1.1",
+    "prop-types": "^15.6.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.1",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "chai": "^4.1.2",
+    "css-loader": "^0.28.7",
+    "eslint": "4.9.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "2.7.0",
+    "eslint-plugin-jsx-a11y": "6.0.2",
+    "eslint-plugin-react": "7.4.0",
+    "file-loader": "^1.1.5",
+    "html-webpack-plugin": "^2.30.1",
+    "jsdom": "^11.3.0",
+    "less": "^2.7.3",
+    "less-loader": "^4.0.5",
+    "mocha": "^4.0.1",
+    "react-hot-loader": "^3.1.1",
+    "sinon": "^4.1.1",
+    "style-loader": "^0.19.0",
+    "stylelint": "^8.2.0",
+    "stylelint-webpack-plugin": "^0.9.0",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4"
+  }
+}

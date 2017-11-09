@@ -1,0 +1,87 @@
+/*
+ * Variables
+ */
+@notification-border-radius: @border-radius;
+@notification-offset: @whitespace-base;
+@notification-spacing: @whitespace-small;
+@notification-text: @color-white;
+@notification-zindex: 2000;
+
+/*
+ * Notifications Container
+ */
+.notifications-container {
+  left: @notification-offset;
+  position: fixed;
+  right: @notification-offset;
+  top: @notification-offset;
+  z-index: @notification-zindex;
+
+  @media (min-width: @screen-xsmall-min) {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    width: ~'calc(@{screen-xsmall-min} - (@{notification-offset} * 2))';
+  }
+}
+
+/*
+ * Notification
+ */
+.notification {
+  align-items: center;
+  display: flex;
+  border-radius: @notification-border-radius;
+  color: @notification-text;
+  max-width: 80rem;
+  padding: @notification-spacing;
+  position: relative;
+}
+
+.notification__text {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: @notification-spacing;
+  min-width: 0;
+}
+
+.notification__link {
+  color: @notification-text;
+  .u-text-underline;
+
+  &:focus,
+  &:hover {
+    color: currentColor;
+  }
+}
+
+/*
+ * Notification Icon
+ */
+.notification__icon {
+  font-size: @font-size-medium;
+  margin-right: @notification-spacing;
+}
+
+/*
+ * Notification Close Button
+ */
+.notification__close {
+  margin-left: auto; // Stick button on the right
+}
+
+/*
+ * Notification State Modifiers
+ */
+.notification--danger {
+  background: @color-danger;
+}
+
+.notification--default {
+  background: @color-default;
+}
+
+.notification--success {
+  background: @color-success;
+}
