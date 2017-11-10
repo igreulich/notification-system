@@ -30,7 +30,7 @@ module.exports = {
   },
   output: {
     path: PATHS.out,
-    publicPath: 'dist/',
+    publicPath: '/dist',
     filename: '[name].js',
   },
   devtool: 'eval',
@@ -40,6 +40,7 @@ module.exports = {
       { test: /\.css$/, use: ['style-loader', 'css-loader'] },
       { test: /\.less$/, use: ['style-loader', 'css-loader', 'less-loader'] },
       { test: /\.(woff|woff2|eot|ttf|otf)$/, use: 'file-loader?name=fonts/[name].[ext]' },
+      { test: /\.(svg|png|jpe?g|gif)$/, use: 'file-loader?name=fonts/[name].[ext]' },
     ],
   },
   resolve: {
@@ -50,7 +51,7 @@ module.exports = {
       title: 'Notification System',
       template: `${PATHS.exampleSource}/index.ejs`,
       filename: path.join(__dirname, 'index.html'),
-      hash: true,
+      inject: true,
     }),
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
@@ -59,7 +60,7 @@ module.exports = {
   devServer: {
     port: 9000,
     hot: true,
-    publicPath: 'http://localhost:9000/dist/',
+    publicPath: 'http://localhost:9000/dist',
     overlay: true,
     open: true,
   },
