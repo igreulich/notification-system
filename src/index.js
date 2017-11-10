@@ -5,6 +5,8 @@ import * as NotificationActions from './actions';
 
 import NotificationsContainer from './containers/NotificationsContainer';
 
+import './less/notification-system.less';
+
 document.addEventListener('DOMContentLoaded', () => {
   const notificationsContainer = document.getElementById('js-notifications-container');
 
