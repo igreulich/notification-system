@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { NotificationActions } from '../';
+import NotificationActions from '../';
+
+import Notification from '../components/Notification';
 
 const ExampleApp = () => {
   const handleClick = (event) => {

@@ -20,7 +20,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js -p",
+    "build": "webpack --config webpack.dev.js -p",
     "test": "BABEL_ENV=test mocha --compilers js:babel-core/register --require ./testSetup.js --recursive ./test",
     "test:watch": "yarn run test --watch"
   },

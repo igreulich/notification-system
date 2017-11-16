@@ -15,4 +15,4 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 }, false);
 
-export { NotificationActions }; // eslint-disable-line import/prefer-default-export
+export default NotificationActions;

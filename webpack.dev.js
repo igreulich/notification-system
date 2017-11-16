@@ -30,7 +30,6 @@ module.exports = {
   },
   output: {
     path: PATHS.out,
-    publicPath: '/dist',
     filename: '[name].js',
   },
   devtool: 'eval',
@@ -50,7 +49,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Notification System',
       template: `${PATHS.exampleSource}/index.ejs`,
-      filename: path.join(__dirname, 'index.html'),
+      filename: 'index.html',
       inject: true,
     }),
     new webpack.NamedModulesPlugin(),
@@ -60,7 +59,6 @@ module.exports = {
   devServer: {
     port: 9000,
     hot: true,
-    publicPath: 'http://localhost:9000/dist',
     overlay: true,
     open: true,
   },
